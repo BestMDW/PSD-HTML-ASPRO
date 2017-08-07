@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ASPRO</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript">
+	$( function() {
+		var active = 1;
+		var activeOffer = 1;
+		$( '#menu > ul > li > a').on( 'mouseenter', function() {
+			$( '#rotator ul li:nth-child( ' + active + ') img' ).stop().animate( { 'opacity': 0 } );
+			$( '#rotator ul li:nth-child( ' + $( this ).data( 'getimg' ) + ') img' ).stop().animate( { 'opacity': 1 } );
+			active = $( this ).data( 'getimg' );
+		} );
+		$( '#offer dl dt ').on( 'click', function() {
+			if ( activeOffer != $( this ).data( 'getoffer' ) )
+			{
+				$( '#offer dl dt.active' ).removeClass( 'active' );
+				$( this ).addClass( 'active' );
+				$( '#offer-' + activeOffer ).toggle( 'fast' );
+				$( '#offer-' + $( this ).data( 'getoffer' ) ).toggle( 'fast' );
+				activeOffer = $( this ).data( 'getoffer' );
+			}
+		} );
+	} );
+	</script>
+</head>
+<body>
+	<header>
+		<div id="headerBackgndLine"></div>
+		<div id="topSection" class="posCenter">
+			<a href="#" title="ASPRO Contractor Ltd"><img id="logo" src="images/logo.png" alt="ASPRO Contractor Ltd"></a>
+			<form action="#" method="post">
+			<div id="search">
+				<input type="text" name="fraza" placeholder="text for search"><input type="button" value="Search">
+			</div>
+			</form>
+			<div id="topSectionBottom"></div>
+			<div id="topSectionShadow"></div>
+		</div>
+		<nav id="topMenu" class="posCenter">
+			<ul class="listNoStyle">
+				<li><a href="#" title="ASPRO Contractor Ltd">Home</a></li>
+				<li><a href="#" title="About Us">About Us</a></li>
+				<li><a href="#" title="Reference">Reference</a></li>
+				<li><a href="#" title="Contact">Contact Us</a></li>
+			</ul>
+		</nav>
+		<section id="rotator" class="posCenter">
+			<ul class="listNoStyle">
+				<li><img src="images/renovation.jpg" alt=""></li>
+				<li><img src="images/landscaping.jpg" alt=""></li>
+				<li><img src="images/roofing.jpg" alt=""></li>
+				<li><img src="images/concrete.jpg" alt=""></li>
+			</ul>
+		</section>
+		<nav id="menu" class="posCenter">
+			<ul class="listNoStyle">
+				<li>
+					<a data-getImg="1" href="#" title="House renovation">House Renovation</a>
+					<ul class="listNoStyle">
+						<li><a href="#">Kitchens</a></li>
+						<li><a href="#">Bathrooms</a></li>
+						<li><a href="#">Wet rooms</a></li>
+						<li><a href="#">Plastering</a></li>
+						<li><a href="#">Decorating</a></li>
+						<li><a href="#">Electrics</a></li>
+						<li><a href="#">Plumbing</a></li>
+						<li><a href="#">Tiling</a></li>
+						<li><a href="#">Flooring</a></li>
+						<li><a href="#">Windows</a></li>
+						<li><a href="#">Doors</a></li>
+						<li><a href="#">Brickwork</a></li>
+						<li><a href="#">Carpenter</a></li>
+						<li><a href="#">Guttering</a></li>
+						<li><a href="#">Conservatories</a></li>
+						<li><a href="#">Wood house</a></li>
+					</ul>
+				</li>
+				<li>
+					<a data-getImg="2" href="#" title="Landscaping">Landscaping</a>
+					<ul class="listNoStyle">
+						<li><a href="#">Driveway</a></li>
+						<li><a href="#">Decking</a></li>
+						<li><a href="#">Paving</a></li>
+						<li><a href="#">Fencing</a></li>
+						<li><a href="#">Patio & slabs</a></li>
+						<li><a href="#">Tarmacing</a></li>
+						<li><a href="#">Garden</a></li>
+						<li><a href="#">Shed</a></li>
+						<li><a href="#">Gates</a></li>
+						<li><a href="#">Walls</a></li>
+						<li><a href="#">Steps</a></li>
+						<li><a href="#">Earth work</a></li>
+						<li><a href="#">Sewerage work</a></li>
+						<li><a href="#">Faundation</a></li>
+						<li><a href="#">Groundworks</a></li>
+					</ul>
+				</li>
+				<li>
+					<a data-getImg="3" href="#" title="Roofing Services">Roofing Services</a>
+					<ul class="listNoStyle">
+						<li><a href="#">Roof repair</a></li>
+						<li><a href="#">Timber roof construction</a></li>
+						<li><a href="#">Patio and deck roof</a></li>
+						<li><a href="#">Roof insulation</a></li>
+						<li><a href="#">Loft ladder</a></li>
+						<li><a href="#">Roof windows</a></li>
+						<li><a href="#">Flat roof</a></li>
+						<li><a href="#">Loft conversions</a></li>
+						<li><a href="#">Chimneys</a></li>
+					</ul>
+				</li>
+				<li>
+					<a data-getImg="4" href="#" title="Concrete Floors">Concrete Floors</a>
+					<ul class="listNoStyle" style="left: auto; right: 0">
+						<li><a href="#">Armoured industrial floors</a></li>
+						<li><a href="#">Epoxy cast floors</a></li>
+						<li><a href="#">Aesthetic floors</a></li>
+						<li><a href="#">Self-Reveling industrial floors</a></li>
+						<li><a href="#">Antistatic floor screeds</a></li>
+						<li><a href="#">Stone carpets</a></li>
+						<li><a href="#">Polished concrete finish</a></li>
+						<li><a href="#">Paving and curbs</a></li>
+						<li><a href="#">Epoxy floor screeds</a></li>
+						<li><a href="#">Polyurethane screeds</a></li>
+						<li><a href="#">Antistatic floor screeds</a></li>
+						<li><a href="#">Magne site self-leveling screed</a></li>
+						<li><a href="#">Anhydrite spawn</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div id="main" class="posCenter">
+		<article id="content">
+			<div class="aboutus">
+				<h1>ASPRO Contractor LTD</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span>Lorem Ipsum has been the industry's</span> standard dummy text ever since the 1500s, when an unknown printer.</p>
+				<p><span>Lorem Ipsum is simply dummy</span> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+			</div>
+			<div class="news">
+				<h2 class="title">Title of the news</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+			<div class="news">
+				<h2 class="title">Title of the news</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+		</article>
+		<aside id="content2nd">
+			<section id="offer">
+				<dl>
+					<dt data-getOffer="1" class="active">House renovation<span class="more"></span></dt>
+					<dd id="offer-1" class="active">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer<div class="more"><a href="#">more</a></div></dd>
+					<dt data-getOffer="2">Landscaping<span class="more"></span></dt>
+					<dd id="offer-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer<div class="more"><a href="#">more</a></div></dd>
+					<dt data-getOffer="3">Roofing Services<span class="more"></span></dt>
+					<dd id="offer-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer<div class="more"><a href="#">more</a></div></dd>
+					<dt data-getOffer="4">Concrete Floors<span class="more"></span></dt>
+					<dd id="offer-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer<div class="more"><a href="#">more</a></div></dd>
+				</dl>
+			</section>
+			<section id="reference">
+				<h3 class="title">Reference</h3>
+				<p class="higherLine bigger stretch">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release</p>
+			</section>
+			<section id="gallery">
+				<ul class="listNoStyle">
+					<li><a href="#"><img src="images/temp2.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/temp2.jpg" alt=""></a></li>
+					<li><a href="#"><img src="images/temp2.jpg" alt=""></a></li>
+				</ul>
+			</section>
+		</aside>
+	</div>
+	<footer>
+		<div class="line1st">
+			<div class="address">
+				<strong class="title">Address</strong>
+				<p>12 Street<br>Redditch, B98 1SR</p>
+			</div>
+			<div class="contact">
+				<strong class="title">Contact</strong>
+				<p>e-mail: <a href="#">contact@aspro.co.uk</a><br>tel: 1113 213 123</p>
+			</div>
+		</div>
+		<div class="line2nd">
+			<div class="posCenter">
+				<div class="left">
+					<a href="#"><img src="images/footer-logo.png" alt="ASPRO Contractor Ltd"></a>
+					<p>All right reserved.</p>
+				</div>
+				<div class="right">Project by: <a href="mailto:bestmdw@gmail.com">Maciej Wloch</a></div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
